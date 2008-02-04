@@ -7,7 +7,7 @@ Version:    %{version}
 Release:    %{release}
 License:    GPL or Artistic
 Group:      Development/Perl
-Summary:    a fast, middleweight template engine.
+Summary:    a fast, middleweight template engine
 Url:        http://search.cpan.org/dist/%{module}
 Source:     http://www.cpan.org/modules/by-module/Text/%{module}-%{version}.tar.gz
 BuildRequires: perl-devel
