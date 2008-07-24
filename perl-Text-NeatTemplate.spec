@@ -1,6 +1,6 @@
 %define module   Text-NeatTemplate
 %define version    0.08
-%define release    %mkrel 1
+%define release    %mkrel 3
 
 Name:       perl-%{module}
 Version:    %{version}
