@@ -1,19 +1,19 @@
-%define module   Text-NeatTemplate
-%define version    0.08
-%define release    %mkrel 4
+%define upstream_name    Text-NeatTemplate
+%define upstream_version 0.08
 
-Name:       perl-%{module}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    A fast, middleweight template engine
-Url:        http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/Text/%{module}-%{version}.tar.gz
-BuildRequires: perl-devel
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Text/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(Module::Build::Compat)
-BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}
+BuildArch:     noarch
+BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module provides a simple, middleweight but fast template engine,
@@ -21,7 +21,7 @@ for when you need speed rather than complex features, yet need more features
 than simple variable substitution.
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 find . -type f | xargs chmod +w
 
 %build
@@ -43,4 +43,3 @@ rm -rf %{buildroot}
 %doc Changes README
 %{_mandir}/man3/*
 %perl_vendorlib/Text
-
