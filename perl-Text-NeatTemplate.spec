@@ -43,3 +43,27 @@ rm -rf %{buildroot}
 %doc Changes README
 %{_mandir}/man3/*
 %perl_vendorlib/Text
+
+
+%changelog
+* Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 0.80.0-1mdv2010.0
++ Revision: 405712
+- rebuild using %%perl_convert_version
+
+* Thu Jul 31 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.08-4mdv2009.0
++ Revision: 258618
+- rebuild
+
+* Thu Jul 24 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.08-3mdv2009.0
++ Revision: 246635
+- rebuild
+- fix summary-not-capitalized
+- fix summary-ended-with-dot
+
+* Wed Dec 26 2007 Guillaume Rousse <guillomovitch@mandriva.org> 0.08-1mdv2008.1
++ Revision: 138068
+- import perl-Text-NeatTemplate
+
+
+* Wed Dec 26 2007 Guillaume Rousse <guillomovitch@mandriva.org> 0.08-1mdv2008.1
+- first mdv release
