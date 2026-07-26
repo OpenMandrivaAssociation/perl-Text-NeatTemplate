@@ -1,16 +1,14 @@
 %define upstream_name    Text-NeatTemplate
-%define upstream_version 0.11
-
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    3
+Version:    0.11
+Release:    4
 
 Summary:    A fast, middleweight template engine
 
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Text/%{upstream_name}-%{upstream_version}.tar.gz
+Url:        https://metacpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Text/%{upstream_name}-%{version}.tar.gz
 
 BuildRequires: perl(Module::Build::Compat)
 BuildRequires: perl(JSON::PP)
@@ -22,7 +20,7 @@ for when you need speed rather than complex features, yet need more features
 than simple variable substitution.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 find . -type f | xargs chmod +w
 
 %build
